@@ -55,3 +55,7 @@ async def subpage3(request: Request):
 # @app.get("/subpage4", response_class=HTMLResponse)
 # async def subpage4(request: Request):
 #     return templates.TemplateResponse("subpage4.html", {"request": request, "page_title": "Subpage 4"})
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, port=8000)
