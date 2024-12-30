@@ -57,30 +57,30 @@ button:active {
 /* Info icon styling */
 .info-icon {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 2vh; /* Responsive top position */
+    left: 2vh; /* Responsive left position */
     font-family: Arial, sans-serif;
-    font-size: 24px;
+    font-size: clamp(24px, 6vw, 32px); /* Larger responsive font size */
     font-weight: bold;
     color: #ffffff;
     background-color: #0078d7;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 8vw; /* Larger responsive width */
+    height: 8vw; /* Larger responsive height */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5vw 0.75vw rgba(0, 0, 0, 0.1); /* Responsive shadow */
 }
 
 /* Popup styling */
 .popup {
     display: none;
     position: fixed;
-    top: 5%;
-    right: 3%;
-    left: 3%;
+    top: 10%; /* Adjusted top position */
+    right: 5%; /* Adjusted right position */
+    left: 5%; /* Adjusted left position */
     background-color: #ffffff;
     color: #000000;
     border: 0.1vw solid #0078d7;
@@ -98,7 +98,7 @@ button:active {
     padding: 20px;
     font-family: Arial, sans-serif;
     text-align: left;
-    font-size: clamp(14px, 4vw, 18px); /* Responsive font size */
+    font-size: clamp(16px, 4vw, 20px); /* Responsive font size */
 }
 
 .close {
