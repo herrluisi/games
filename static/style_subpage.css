@@ -1,23 +1,24 @@
 /* Styling for the "New" button */
+/* Styling for the "New" button */
 button {
     font-family: Arial, sans-serif;
-    font-size: clamp(14px, 2.5vw, 18px); /* Responsive button text size */
+    font-size: clamp(24px, 12vw, 28px); /* Increased responsive button text size */
     font-weight: bold;
     color: #ffffff;
     background-color: #0078d7; /* Blue background */
     border: none;
     border-radius: 8px;
-    padding: 12px 24px; /* Button padding */
+    padding: 4vw 8vw; /* Increased responsive button padding */
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 2vh; /* Responsive margin */
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+    box-shadow: 0 0.5vw 0.75vw rgba(0, 0, 0, 0.1); /* Responsive button shadow */
 }
 
 button:hover {
     background-color: #005bb5; /* Darker blue on hover */
     transform: scale(1.05); /* Slightly increase size */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Shadow change */
+    box-shadow: 0 1vw 1.5vw rgba(0, 0, 0, 0.15); /* Shadow change */
 }
 
 button:active {
@@ -31,7 +32,7 @@ button:active {
     bottom: 10px;
     left: 10px;
     font-family: Arial, sans-serif;
-    font-size: clamp(14px, 2vw, 16px); /* Responsive font size for smaller screens */
+    font-size: clamp(24px, 12vw, 28px); /* Responsive font size for smaller screens */
     font-weight: bold;
     color: #ffffff;
     text-decoration: none; /* No underline */

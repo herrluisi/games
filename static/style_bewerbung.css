@@ -16,7 +16,9 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    font-size: clamp(24px, 4vw, 36px); /* Responsive font size */
+    margin-right: 20%;
+    margin-left: 20%;
+    font-size: clamp(28px, 6vw, 40px); /* Responsive font size */
     color: #ffffff;
 }
 
