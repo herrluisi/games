@@ -1,0 +1,26 @@
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    background-color: #2e2e2e; /* Dark background */
+    font-family: Arial, sans-serif;
+    color: #ffffff; /* White text */
+    text-align: center;
+    position: relative; /* Needed for absolutely positioning the back button */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: clamp(24px, 4vw, 36px); /* Responsive font size */
+    color: #ffffff;
+}
+
+p {
+    margin: 10px 0;
+    font-size: clamp(14px, 2.5vw, 18px); /* Responsive font size */
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="/static/style_bewerbung.css">
+    <link rel="stylesheet" href="/static/style_subpage.css">
+</head>
+<body>
+    <div class="info-icon" onclick="togglePopup()">i</div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p>Regeln:</p>
+            <ul>
+                <li>Ein Spieler wird gleich angeklagt - er wei&szlig; aber nicht warum</li>
+                <li>Alle anderen Spieler sind die Leute, welche das Verh&ouml;r durchf&uuml;hren</li>
+                <li>Die Anzahl der Spieler auf den jeweiligen Seiten ist anpassbar</li>
+                <li>Gerne darf auch der Angeklagte das Gespr&auml;ch anf&uuml;hren und &quot;offensiv&quot; reingehen</li>
+                <li>Fragen sind z. B.: </li>
+                <ul>
+                    <li>&quot;Was hat Sie zu dieser Tat verleitet?&quot;</li>
+                    <li>&quot;Wo waren Sie zum Tatzeitpunkt?&quot;</li>
+                    <li>&quot;Lief die Tat Reibungslos, oder gab es komplikationen?&quot;</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <h1>{{ page_title }}</h1>
+    <h1>Angeklagt wegen: <br>{{ crime }}</h1>
+    <form method="get" action="/gericht"> <!-- Reloads the page on form submission -->
+        <button type="submit">New</button> <!-- Reload button -->
+    </form>
+    <a class="back-button" href="/">&#8592; Back to Homepage</a> <!-- Back button with left arrow -->
+    <script>
+        function togglePopup() {
+            let popup = document.getElementById("popup");
+            popup.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

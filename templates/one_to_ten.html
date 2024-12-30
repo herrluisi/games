@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="/static/style_one_to_ten.css">
+    <link rel="stylesheet" href="/static/style_subpage.css">
+</head>
+<body>
+    <div class="info-icon" onclick="togglePopup()">i</div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p>Regeln:</p>
+            <ul>
+                <li>Ein Spieler sucht sich hier auf der Website ein Szenario aus</li>
+                <li>Aus einem Stapel von Zettel, welche mit Zahlen von 1 - 10 beschriftet sind, ziehen die restlichen
+                Spieler eine Zahl</li>
+                <li>Sobald alle Spieler ihre Zahl gezogen haben &uuml;berlegen sie sich ein Szenario, welches von dem
+                    Extremheitsgrad zu ihrer Zahl passt.</li>
+                <li>Wenn (fast) alle Spieler sich ein Szenario &uuml;berlegt haben tragen sie es ohne ihre Zahl zu verraten vor</li>
+                <li>Der eine Spieler welche sich das Szenario ausgesucht hat muss jetzt dieses Szenario von der Person
+                    (in Form von dem Zettel oder einem pers&ouml;nlichem Gegenstand der Person) in eine Reihe einsortieren</li>
+                <li>Diese Reihe ist steigend und das Ziel ist es alle Szenarien richtig nach der Nummer einzuordnen</li>
+                <li>Die Gegenst&auml;nde/Der Zettel darf auch noch verr&uuml;ckt werden. Erst wenn die Person alles einloggt, dann
+                wird &uuml;berpr&uuml;ft ob es richtig ist</li>
+            </ul>
+        </div>
+    </div>
+    <h1>{{ page_title }}</h1>
+    <h2>{{ phrase }}</h2>
+    <h2>Von: {{ from }}</h2>
+    <h2>Bis: {{ to }}</h2>
+    <form method="get" action="/one_to_ten"> <!-- Reloads the page on form submission -->
+        <button type="submit">New</button> <!-- Reload button -->
+    </form>
+    <a class="back-button" href="/">&#8592; Back to Homepage</a> <!-- Back button with left arrow -->
+    <script>
+        function togglePopup() {
+            let popup = document.getElementById("popup");
+            popup.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

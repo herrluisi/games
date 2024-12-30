@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="/static/style_bewerbung.css">
+    <link rel="stylesheet" href="/static/style_subpage.css">
+</head>
+<body>
+    <div class="info-icon" onclick="togglePopup()">i</div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p>Regeln:</p>
+            <ul>
+                <li>Ein Spieler bewirbt sich gleich auf einen Job - er wei&szlig; aber nicht welcher</li>
+                <li>Alle anderen Spieler sind die Leute, welche das Bewerbungsgespr&auml;ch f&uuml;hren</li>
+                <li>Die Anzahl der Spieler auf den jeweiligen Seiten ist anpassbar</li>
+                <li>Gerne darf auch der Bewerber das Gespr&auml;ch anf&uuml;hren und &quot;offensiv&quot; reingehen</li>
+                <li>Fragen sind z. B.: </li>
+                <ul>
+                    <li>&quot;Was f&uuml;hrt Sie zu diesem Beruf?&quot;</li>
+                    <li>&quot;Was sind Ihre St&auml;rken und Schw&auml;chen?&quot;</li>
+                    <li>&quot;F&uuml;hren Sie diese T&auml;tigkeit auch privat aus?&quot;</li>
+                    <li>&quot;Was sind Ihre Ziele?&quot;</li>
+                    <li>&quot;Was sind Ihre Hobbies?&quot;</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <h1>{{ page_title }}</h1>
+    <h1>{{ job }}</h1>
+    <form method="get" action="/bewerbung"> <!-- Reloads the page on form submission -->
+        <button type="submit">New</button> <!-- Reload button -->
+    </form>
+    <a class="back-button" href="/">&#8592; Back to Homepage</a> <!-- Back button with left arrow -->
+    <script>
+        function togglePopup() {
+            let popup = document.getElementById("popup");
+            popup.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
